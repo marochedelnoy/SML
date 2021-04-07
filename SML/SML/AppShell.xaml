@@ -31,7 +31,8 @@
 
     <TabBar>
         <ShellContent Title="Home" Icon="icon_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
-        <ShellContent Title="Tracker" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}" />
+        <ShellContent Title="Trackers" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}" />
+        <ShellContent Title="Maps" Icon="pin.png" ContentTemplate="{DataTemplate local:MapsPage}" />
     </TabBar>
 
     <!--
