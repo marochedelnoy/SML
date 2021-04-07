@@ -11,5 +11,12 @@ namespace SML.Views
         {
             InitializeComponent();
         }
+
+        [Obsolete]
+        private void Button_Clicked_GitHub(object sender, EventArgs e)
+        {
+            var url = "https://github.com/marochedelnoy/SML";
+            Device.OpenUri(new Uri(url));
+        }
     }
 }

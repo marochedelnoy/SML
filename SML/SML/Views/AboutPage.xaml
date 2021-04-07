@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SML.Views.AboutPage"
              xmlns:vm="clr-namespace:SML.ViewModels"
-             Title="{Binding Title}">
+             Title="Homepage">
     
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
@@ -11,7 +11,7 @@
     
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="Accent">#0AE7EA</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -20,30 +20,25 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+        <StackLayout BackgroundColor="#9dcbf5" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                    <Image Source="xamarin_logo.png" VerticalOptions="Center" HeightRequest="64" />
+                <ContentView Padding="0,20,0,20" VerticalOptions="FillAndExpand">
+                    <Image Source="logo_large.png" VerticalOptions="Center" HeightRequest="100" />
                 </ContentView>
             </StackLayout>
         </StackLayout>
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
-                <Label Text="Start developing now" FontSize="Title"/>
-                <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="0,0,0,0"/>
-                <Label FontSize="16" Padding="0,24,0,0">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="Learn more at "/>
-                                <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Button Margin="0,10,0,0" Text="Learn more"
-                        Command="{Binding OpenWebCommand}"
-                        BackgroundColor="{StaticResource Primary}"
+                <Label Text="Casusgroep 2" FontSize="Title" HorizontalTextAlignment="Center"/>
+                <Label Text="Rob Coenen" FontSize="16" Padding="0,0,0,0" HorizontalTextAlignment="Center"/>
+                <Label Text="Maroche Delnoy" FontSize="16" Padding="0,0,0,0" HorizontalTextAlignment="Center"/>
+                <Label Text="Youri Dera" FontSize="16" Padding="0,0,0,0" HorizontalTextAlignment="Center"/>
+                <Label Text="Roman Pijls" FontSize="16" Padding="0,0,0,40" HorizontalTextAlignment="Center"/>
+
+                <Label Text="GitHub" FontSize="Title" HorizontalTextAlignment="Center"/>
+                <Button Margin="0,0,0,0" Text="Click Here"
+                        Clicked="Button_Clicked_GitHub"
+                        BackgroundColor="#2894f4"
                         TextColor="White" />
             </StackLayout>
         </ScrollView>
